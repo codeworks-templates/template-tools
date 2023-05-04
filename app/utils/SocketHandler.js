@@ -1,4 +1,4 @@
-import { io } from 'socket.io-client'
+// import { io } from 'socket.io-client'
 import { baseURL, useSockets } from '../env.js'
 import { logger } from './Logger.js'
 
