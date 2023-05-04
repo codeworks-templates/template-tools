@@ -58,15 +58,10 @@ export class Pop {
   }
 
   /**
-   * @param { AxiosError | Error | string | any } error An Error Object.
+   * @param { Error | string | any } error An Error Object.
    */
   static error(error) {
-    if (error.isAxiosError) {
-      const { response } = error
-      this.toast(response.data.error.message || response.data.message, 'error')
-    } else {
-      this.toast(error.message || error, 'error')
-    }
+    this.toast(error.message || error, 'error')
   }
 
   /**
