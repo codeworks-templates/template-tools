@@ -9,10 +9,8 @@ export const api = axios.create({
   withCredentials: true
 })
 
-
 api.interceptors.request.use(config => config, handleAxiosError)
 api.interceptors.response.use(response => response, handleAxiosError)
-
 
 function handleAxiosError(error) {
   if (error.response) {
